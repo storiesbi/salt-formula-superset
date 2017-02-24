@@ -155,7 +155,7 @@ superset_create_user_{{ user_name }}:
 
 superuset_permissions:
   cmd.run:
-  - name: chown superuset:superuset . -R
+  - name: chown superset:superset . -R
   - cwd: /srv/superset
   - user: root
   - require:
