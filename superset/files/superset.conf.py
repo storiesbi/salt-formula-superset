@@ -36,5 +36,7 @@ BROKER_URL = 'amqp://{{ server.broker.user }}:{{ server.broker.password }}@{{ se
 
 {%- if server.cache is defined and server.cache.engine == 'redis' %}
 CACHE_TYPE = "{{ server.cache.engine }}"
-CACHE_REDIS_URL = '{{ server.cache.engine }}://{{ server.cache.host }}:{{ server.cache.port }}/{{ server.cache.get("number", 2) }}'
+CACHE_REDIS_HOST = '{{ server.cache.host }}'
+CACHE_REDIS_PORT = {{ server.cache.port }}
+CACHE_REDIS_DB = '{{ server.cache.get("number", 2) }}'
 {%- endif %}
