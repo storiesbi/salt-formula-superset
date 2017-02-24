@@ -1,0 +1,15 @@
+Source: salt-formula-superset
+Maintainer: Michael Kuty <michael.kuty@stories.bi>
+Section: admin
+Priority: optional
+Build-Depends: debhelper (>= 9), salt-master, python, python-yaml
+Standards-Version: 3.9.6
+Homepage: http://www.tcpcloud.eu
+Vcs-Browser: https://github.com/tcpcloud/salt-formula-superset
+Vcs-Git: https://github.com/tcpcloud/salt-formula-superset.git
+
+Package: salt-formula-superset
+Architecture: all
+Depends: ${misc:Depends}, salt-master, reclass
+Description: superset salt formula
+ Install and configure superset system.
