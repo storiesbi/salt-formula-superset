@@ -143,7 +143,7 @@ superset_load_examples:
 {%- for user_name, user in server.auth.user.iteritems() %}
 superset_create_user_{{ user_name }}:
   cmd.run:
-  - name: . {{ virtualenv }} && fabmanager create-admin --app superset --username {{ user.username }} --email {{ user.email }} --password {{ user.password }};touch /srv/superset/flags/user_{{ user.username }}
+  - name: . {{ virtualenv }} && fabmanager create-admin --app superset --lastname {{ user.username }} --firstname {{ user.username }} --username {{ user.username }} --email {{ user.email }} --password {{ user.password }};touch /srv/superset/flags/user_{{ user.username }}
   - cwd: /srv/superset
   - unless: "[ -f /srv/superset/flags/user_{{ user.username }} ]"
   - env:
