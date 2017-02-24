@@ -48,6 +48,11 @@ Single superset service
         logging:
           engine: sentry
           dsn: dsn
+      cache:
+        engine: redis
+        host: ${_param:superset_cache_host}
+        port: 6379
+        number: 11
 
     supervisor:
       server:
